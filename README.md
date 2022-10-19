@@ -26,7 +26,17 @@ as políticas da instituição.
   
   # Modo de Uso
   
- 
+  Disponibilizamos o arquivo _example.py_ com um caso de uso hipotético.
+  
+  O método combine_orders deve ser instanciado com uma lista contendo os valores a serem recolhidos em cada
+  agência. 
+  
+  Também devemos informar o valor n_max (valor máximo aceito por order request).
+  
+  Cada order_request deve conter no máximo duas coletas, e a soma destas coletas não pode ser superior a
+  n_max.
+  
+  O método deverá retornar um valor inteiro que representa o número mínimo de viagens.
   
   # Testes
   
