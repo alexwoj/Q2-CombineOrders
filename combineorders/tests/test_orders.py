@@ -1,6 +1,7 @@
 import unittest
 from combineorders.orders import Orders
 
+
 class TestCombineOrders(unittest.TestCase):
 
     def setUp(self):

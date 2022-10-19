@@ -34,12 +34,12 @@ class Orders:
                     fit_flag = self._check_if_fits(order_amount_sum, order_amount, n_max)
 
                     if fit_flag is True:
-                        self._add_order_amount(order_amount, n_max)
+                        self._add_order_amount(order_amount)
 
                     if fit_flag is False:
                         self._reset_order_amount_list()
                         self._add_trip()
-                        self._add_order_amount(order_amount, n_max)
+                        self._add_order_amount(order_amount)
 
             return self.number_of_trips
 
@@ -51,7 +51,7 @@ class Orders:
 
         self.current_order_amount_list = []
 
-    def _add_order_amount(self, order_amount, n_max):
+    def _add_order_amount(self, order_amount):
         """Add order amount to order list"""
 
         self.current_order_amount_list.append(order_amount)
@@ -59,7 +59,7 @@ class Orders:
     def _check_if_fits(self, order_amount_sum, order_amount, n_max):
         """Checks if order amount fits in current order list.
 
-        This method will return a True of False flag depending on the following criterias:
+        This method will return a True of False flag depending on the following criteria:
 
         order_amount_sum + current order amount should be lower than n_max value
 
